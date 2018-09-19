@@ -1,18 +1,18 @@
 package com.service;
 
-import com.dao.LoginDao;
-import com.model.User;
+import com.dao.impl.BaseDao;
+import com.model.TUser;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 @Service("loginService")
 public class LoginService {
-    @Resource(name = "loginDao")
-    private LoginDao dao;
+    @Autowired(required = false)
+    private BaseDao dao;
 
-    public List<User> getAllUser() {
-        return dao.findAll();
+    public List<TUser> getAllUser() {
+       return dao.findAll();
     }
 }

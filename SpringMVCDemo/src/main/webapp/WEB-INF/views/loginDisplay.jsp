@@ -12,7 +12,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Spring MVC Hello World</title>
+    <title>Spring MVC</title>
 </head>
 
 <body>
@@ -20,17 +20,19 @@
 
 <table border="1">
     <tr>
-        <th>Id</th>
-        <th>Name</th>
-        <th>Age</th>
-        <th>Sex</th>
+        <th>AppId</th>
+        <th>UserName</th>
+        <th>Email</th>
+
+
     </tr>
     <c:forEach var="user" items="${users}">
         <tr>
-            <td>${user.id}</td>
-            <td>${user.name}</td>
-            <td>${user.age}</td>
-            <td>${user.sex}</td>
+            <td>${user.appId}</td>
+            <td>${user.userName}</td>
+            <td>${user.email}</td>
+
+
         </tr>
     </c:forEach>
 </table>
